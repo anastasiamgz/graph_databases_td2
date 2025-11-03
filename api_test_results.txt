@@ -1,0 +1,181 @@
+=== E-Commerce Recommendation API Test Results ===
+
+1. Health Check:
+{
+    "ok": true
+}
+
+2. Graph Statistics:
+{
+    "stats": {
+        "customers": 3,
+        "products": 4,
+        "orders": 3,
+        "categories": 2,
+        "relationships": 17
+    }
+}
+
+3. All Customers:
+{
+    "customers": [
+        {
+            "id": "C1",
+            "name": "Alice",
+            "join_date": {
+                "_Date__ordinal": 738887,
+                "_Date__year": 2024,
+                "_Date__month": 1,
+                "_Date__day": 2
+            }
+        },
+        {
+            "id": "C2",
+            "name": "Bob",
+            "join_date": {
+                "_Date__ordinal": 738927,
+                "_Date__year": 2024,
+                "_Date__month": 2,
+                "_Date__day": 11
+            }
+        },
+        {
+            "id": "C3",
+            "name": "Chlo\u00e9",
+            "join_date": {
+                "_Date__ordinal": 738950,
+                "_Date__year": 2024,
+                "_Date__month": 3,
+                "_Date__day": 5
+            }
+        }
+    ]
+}
+
+4. All Products:
+{
+    "products": [
+        {
+            "id": "P3",
+            "name": "Graph Databases Book",
+            "price": 39.0,
+            "category": "Books"
+        },
+        {
+            "id": "P4",
+            "name": "Mechanical Keyboard",
+            "price": 89.0,
+            "category": "Electronics"
+        },
+        {
+            "id": "P2",
+            "name": "USB-C Hub",
+            "price": 49.0,
+            "category": "Electronics"
+        },
+        {
+            "id": "P1",
+            "name": "Wireless Mouse",
+            "price": 29.99,
+            "category": "Electronics"
+        }
+    ]
+}
+
+5. Popular Products:
+{
+    "strategy": "popular_products",
+    "recommendations": [
+        {
+            "product_id": "P2",
+            "product_name": "USB-C Hub",
+            "price": 49.0,
+            "order_count": 2
+        },
+        {
+            "product_id": "P1",
+            "product_name": "Wireless Mouse",
+            "price": 29.99,
+            "order_count": 1
+        },
+        {
+            "product_id": "P3",
+            "product_name": "Graph Databases Book",
+            "price": 39.0,
+            "order_count": 1
+        },
+        {
+            "product_id": "P4",
+            "product_name": "Mechanical Keyboard",
+            "price": 89.0,
+            "order_count": 1
+        }
+    ]
+}
+
+6. Content-Based Recommendations (Product P1):
+{
+    "product_id": "P1",
+    "strategy": "content_based",
+    "recommendations": [
+        {
+            "product_id": "P2",
+            "product_name": "USB-C Hub",
+            "price": 49.0,
+            "popularity": 2
+        },
+        {
+            "product_id": "P4",
+            "product_name": "Mechanical Keyboard",
+            "price": 89.0,
+            "popularity": 1
+        }
+    ]
+}
+
+7. Co-Purchase Recommendations (Product P1):
+{
+    "product_id": "P1",
+    "strategy": "co_purchase",
+    "recommendations": [
+        {
+            "product_id": "P2",
+            "product_name": "USB-C Hub",
+            "price": 49.0,
+            "co_purchase_count": 1
+        }
+    ]
+}
+
+8. Customer Journey - Alice (C1):
+{
+    "customer_id": "C1",
+    "journey": {
+        "customer_name": "Alice",
+        "views": 1,
+        "clicks": 1,
+        "cart_additions": 0,
+        "purchases": 3
+    }
+}
+
+9. Customer Journey - Bob (C2):
+{
+    "customer_id": "C2",
+    "journey": {
+        "customer_name": "Bob",
+        "views": 1,
+        "clicks": 0,
+        "cart_additions": 1,
+        "purchases": 1
+    }
+}
+
+10. Collaborative Filtering - Alice (C1):
+{
+    "customer_id": "C1",
+    "strategy": "collaborative_filtering",
+    "recommendations": []
+}
+
+=== All Tests Completed Successfully ===
