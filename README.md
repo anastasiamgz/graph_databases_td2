@@ -1,10 +1,10 @@
 # graph_database_tp1
 
 # Structure:
-
+~~~
 .
 ├── docker-compose.yml
-├── api_test_results.txt    # 
+├── api_test_results.txt    
 ├── postgres/
 │   └── init/
 │       ├── 01_schema.sql
@@ -19,6 +19,7 @@
 │   ├── start.sh      # starter script for running the uvicorn server 
 │   ├── requirements.txt # the libs you need 
 └── README.md         # documnetation + **answers to the open-ended questions**
+~~~
 
 This project implements a complete e-commerce recommendation engine demonstrating the practical application of graph databases in production systems. The architecture showcases:
 
